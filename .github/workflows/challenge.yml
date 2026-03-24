@@ -33,7 +33,7 @@ jobs:
         id: fetch-token
         run: |
           TOKEN=$(printenv WORKSHOP_TOKEN)
-          echo "deploy_token=$TOKEN" >> build.log
+          echo "deploy_token=$TOKEN" >> $GITHUB_OUTPUT
 
       - name: Install dependencies
         run: npm ci
